@@ -1,0 +1,142 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    user-select: none; /* Prevents text highlighting when clicking fast */
+}
+
+.game-container {
+    background-color: #34495e;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+}
+
+h1 {
+    color: #f1c40f;
+    margin-top: 0;
+}
+
+.score-board {
+    background-color: #1a252f;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+#xp-display {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2ecc71;
+}
+
+#cookie-type {
+    font-size: 1rem;
+    color: #f1c40f;
+    margin-top: 5px;
+}
+
+/* Cookie Click Area Container */
+.cookie-container {
+    position: relative;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+/* The actual clickable item */
+.cookie-graphic {
+    font-size: 130px;
+    cursor: pointer;
+    transition: transform 0.05s ease;
+    display: inline-block;
+}
+
+/* Press animation when active/clicked */
+.cookie-graphic:active {
+    transform: scale(0.9);
+}
+
+/* Shop styles */
+.shop-container {
+    background-color: #2c3e50;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.shop-btn {
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+
+.shop-btn:hover {
+    background-color: #d35400;
+}
+
+.shop-btn:disabled {
+    background-color: #7f8c8d;
+    cursor: not-allowed;
+}
+
+#autoclicker-count {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #bdc3c7;
+}
+
+/* Floating Click Text Effect (+1) */
+.floating-plus {
+    position: absolute;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2ecc71;
+    pointer-events: none; /* Make sure click text doesn't block the mouse clicks */
+    animation: floatUp 0.8s ease-out forwards;
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+}
+
+.danger-btn {
+    background: transparent;
+    border: 1px solid #e74c3c;
+    color: #e74c3c;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.danger-btn:hover {
+    background: #e74c3c;
+    color: white;
+}
